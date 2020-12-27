@@ -2,14 +2,14 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: dev
-  namespace: 34389140
+  namespace: test-jaystary
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: "semver:*"
 spec:
   releaseName: dev
   chart:
-    git: git@github.com:34389140/flux-getting-started
+    git: git@github.com:jaystary/flux-getting-started
     path: chart
     ref: master
   values:
